@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">New Dice</string>
-    <string name="roll">roll</string>
+    <string name="app_name">Guess a date 📅</string>
+    <string name="buttonText">Guess!</string>
+    <string name="month">Month</string>
+    <string name="day">Day</string>
+    <string name="instruction"> Can I guess your birthday? </string>
 </resources>

@@ -21,27 +21,27 @@ class MainActivity : AppCompatActivity() {
     //this function allows users to roll the dice and update the screen with the result
     private fun rollDice() {
 //    create new dice with 6 sides and roll it
-        val dice = Dice(6)
-        val bigDice = bigDice(30)
-        val diceRoll = dice.smollRoll()
-        val bigDiceRoll = bigDice.bigRoll()
+        val month = birthdayMonth(12)
+        val day = birthdayDate(30)
+        val diceRoll = month.smollRoll()
+        val bigDiceRoll = day.bigRoll()
 //    update screen with dice roll
-        val resultTextView: TextView = findViewById(R.id.diceOne)
-        val resultViewTwo: TextView = findViewById(R.id.diceTwo)
+        val resultTextView: TextView = findViewById(R.id.numMonth)
+        val resultViewTwo: TextView = findViewById(R.id.numDate)
         resultTextView.text = diceRoll.toString()
         resultViewTwo.text = bigDiceRoll.toString()
     }
 }
 
-class Dice(val numSides: Int) {
+class birthdayMonth(val monthz: Int) {
     //   if numSides was a private val, it would only be accessible in the dice class
     fun smollRoll(): Int {
-        return (1..numSides).random()
+        return (1..monthz).random()
     }
 }
 
-class bigDice (val bigSides: Int){
+class birthdayDate (val dayz: Int){
     fun bigRoll():Int{
-      return (1..bigSides).random()
+      return (1..dayz).random()
     }
 }
